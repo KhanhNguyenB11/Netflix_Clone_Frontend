@@ -85,7 +85,7 @@ function Search() {
   }, [page, title,genreRef.current.value,sortRef.current.value]);
 
   return (
-    <div className="bg-black h-full w-full sm:resize-none">
+    <div className="bg-black h-screen w-full sm:resize-none">
       <div>
         <UserNavbar hideSearch={true}></UserNavbar>
       </div>
