@@ -6,9 +6,9 @@ function Footer() {
       <div className=" w-full bg-gray-700 h-2"></div>
       <footer className="bg-black text-white py-8 w-full flex justify-center">
         <div className="container flex justify-center px-4 w-full">
-          <div className="flex justify-between">
-            <div className=" md:mb-0 md:mx-[40px]">
-              <h3 className="text-lg font-semibold mb-2 text-gray-300 underline">
+          <div className="flex justify-between md:text-lg text-sm">
+            <div className=" md:mb-0 md:mx-[40px] ">
+              <h3 className="md:text-lg text-sm font-semibold mb-2 text-gray-300 underline">
                 Questions? Contact us.
               </h3>
               <ul>
@@ -19,7 +19,7 @@ function Footer() {
               </ul>
             </div>
             <div className="md:mb-0 md:mx-[40px] mx-3">
-              <h3 className="text-lg font-semibold mb-2">Netflix</h3>
+              <h3 className=" font-semibold mb-2 md:text-lg text-sm">Netflix</h3>
               <ul>
                 <a className=" text-gray-300 underline">Help Center</a>
                 <li className=" text-gray-300 underline">Jobs</li>
@@ -41,7 +41,7 @@ function Footer() {
               </ul>
             </div>
             <div className="md:mb-0 md:mx-[40px] mx-3">
-              <h3 className="text-lg font-semibold mb-2">Get in Touch</h3>
+              <h3 className="md:text-lg  text-sm font-semibold mb-2">Get in Touch</h3>
               <ul>
                 <li className=" text-gray-300 underline">Media Center</li>
                 <li className=" text-gray-300 underline">Term of Uses</li>

@@ -100,13 +100,13 @@ function SignUp() {
         {!submitedEmail && (
           <div className="z-50 ">
             <div className=" text-center">
-              <h1 className="text-white font-bold text-[3rem]">
+              <h1 className="text-white font-bold text-[2.5rem] ">
                 Unlimited movies, TV shows, and more
               </h1>
-              <p className="text-white text-[1.5rem]">
+              <p className="text-white text-[1.5rem] ">
                 Watch anywhere. Cancel anytime.
               </p>
-              <p className="text-white text-[1.5rem]">
+              <p className="text-white text-[1.5rem] ">
                 Ready to watch? Enter your email to create or restart your
                 membership.
               </p>

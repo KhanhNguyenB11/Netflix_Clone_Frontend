@@ -45,7 +45,7 @@ const UserNavbar = ({ hideSearch }) => {
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
               alt="Netflix_logo"
-              className=" w-[90px] h-[100px] z-[100] hover:cursor-pointer lg:w-[200px] md:h-[100px] mt-4"
+              className=" w-24 h-24 z-[100] hover:cursor-pointer lg:w-[200px] md:h-[100px]"
             />
           </Link>
           <Link to="" className="link">
@@ -64,12 +64,12 @@ const UserNavbar = ({ hideSearch }) => {
             </span>
           </Link>
           <Link to={`/${user.username}/list`}>
-            <span className="lg:text-2xl text-lg md:text-xl">My List</span>
+            <span className="lg:text-2xl text-base md:text-xl text-center">My List</span>
           </Link>
         </div>
 
         {/* right side */}
-        <div className="gap-4 flex items-center mr-[50px] mix-blend-overlay">
+        <div className="gap-2 flex items-center  mix-blend-overlay">
           {/* Search */}
           {!hideSearch && (
             <div className="flex items-center">
@@ -79,7 +79,7 @@ const UserNavbar = ({ hideSearch }) => {
                 }`}
               >
                 <CiSearch
-                  className="h-6 w-6 cursor-pointer"
+                  className="h-6 w-6 cursor-pointer md:block hidden"
                   onClick={handleIconClick}
                 />
               </div>
@@ -95,7 +95,7 @@ const UserNavbar = ({ hideSearch }) => {
           )}
 
           {/* User  */}
-          <p className=" lg:text-2xl md:text-xl text-lg">{user.username}</p>
+          <p className=" lg:text-2xl md:text-xl text-base">{user.username}</p>
           <div className="group relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,10 @@ const UserNavbar = ({ hideSearch }) => {
               />
             </svg>
 
-            <div className=" flex-col opacity-0 absolute flex bg-gray-700 rounded-md group-hover:opacity-100 transition-all duration-300">
+            <div className=" flex-col opacity-0 absolute flex bg-gray-700 rounded-md group-hover:opacity-100 transition-all duration-300 right-2">
+            <span className="p-2 cursor-pointer hover:bg-gray-800 transition-colors duration-300 md:hidden " onClick={handleIconClick}>
+                Search
+              </span>
               <span className="p-2 cursor-pointer hover:bg-gray-800 transition-colors duration-300">
                 Settings
               </span>

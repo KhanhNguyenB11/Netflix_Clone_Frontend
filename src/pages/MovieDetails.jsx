@@ -22,14 +22,14 @@ function MovieDetails() {
       });
   }, []);
   return (
-    <div className="w-full h-full bg-black">
+    <div className="w-full h-screen bg-black">
         <UserNavbar></UserNavbar>
         <div className="relative overflow-hidden">
           {/* small screen img */}
           <img
             src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
             alt=""
-            className="w-full max-h-[635px] absolute md:hidden top-0 "
+            className="w-full h-full absolute md:hidden top-0 "
           />
           <div className="bg-black/60 fixed top-0 left-0 w-full h-screen md:hidden"></div>
           {/* big screen display */}

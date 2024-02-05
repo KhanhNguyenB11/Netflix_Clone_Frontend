@@ -5,28 +5,39 @@ import { login } from "../context/authcontext/apiCalls";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {dispatch} = useContext(AuthContext);
+  const { dispatch } = useContext(AuthContext);
+  const [currentHeight, setCurrentHeight] = useState(window.innerHeight);
   function handleLogin(e) {
     e.preventDefault();
-    login({email,password},dispatch);
+    login({ email, password }, dispatch);
   }
+  window.addEventListener("resize", function (event) {
+    // Access the inner height of the screen
+
+    // Do something with the new screen height
+    setCurrentHeight(this.window.innerHeight);
+  });
   return (
-    <>
+    <div className="relative h-screen">
       <Link to="/">
         <img
           src="N_logo.svg"
           className="absolute w-[200px] h-[100px] top-0 left-4 z-[100] hover:cursor-pointer"
         ></img>
       </Link>
-      <div className="w-full h-screen">
+      <div className="w-full h-full overflow-y-auto">
+        {/* background img */}
         <img
           src="login_background.jpg"
           alt="background_img"
-          className="object-cover w-full h-full absolute"
+          className={`object-cover w-full absolute ${
+            currentHeight < 500 ? " h-[700px]" : "h-full"
+          }`}
         />
-        <div className="bg-black/60 fixed top-0 left-0 w-full h-screen"></div>
-        <div className="fixed w-full px-4 py-24 z-50">
-          <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white">
+        <div className="bg-black/60 fixed top-0 left-0 w-full h-full"></div>
+        {/* Overflowing part */}
+        <div className=" w-full px-4 py-24 z-100 absolute">
+          <div className="max-w-[450px]  mx-auto bg-black/75 text-white ">
             <div className="max-w-[320px] mx-auto py-16">
               <h1 className="text-3xl font-bold">Login</h1>
               <form action="" className="w-full flex flex-col py-4">
@@ -50,7 +61,6 @@ function Login() {
                   onClick={(e) => {
                     handleLogin(e);
                   }}
-                  
                 >
                   Login
                 </button>
@@ -65,10 +75,8 @@ function Login() {
             </div>
           </div>
         </div>
-        
       </div>
-      
-    </>
+    </div>
   );
 }
 

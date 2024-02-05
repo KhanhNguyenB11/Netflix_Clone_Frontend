@@ -85,7 +85,7 @@ function Search() {
   }, [page, title,genreRef.current.value,sortRef.current.value]);
 
   return (
-    <div className="bg-black h-screen w-full sm:resize-none">
+    <div className="bg-black h-full w-full sm:resize-none">
       <div>
         <UserNavbar hideSearch={true}></UserNavbar>
       </div>
@@ -145,7 +145,7 @@ function Search() {
             {/* Movies list */}
             <div className="pr-6 md:p-0 md:ml-6">
               <h1 className="text-white text-2xl font-bold p-3">Search Result:</h1>
-              <div className="grid lg:grid-cols-6 h-full md:grid-cols-4 grid-cols-3">
+              <div className="grid lg:grid-cols-6 h-full place-items-center md:grid-cols-4 grid-cols-2">
                 {movies.length > 0 ? (
                   movies.map((movie) => {
                     return <Movie key={movie._id} movie={movie}></Movie>;
@@ -162,18 +162,18 @@ function Search() {
           </div>
         )}
         {/* Pagination */}
-        <div className="flex md:gap-3 gap-1 text-white w-full justify-center items-center ">
+        <div className="flex md:gap-3 text-white w-full justify-center items-center ">
           <ReactPaginate
-            activeClassName="bg-red-600 hover:bg-red-700 transiton-colors duration-300 text-white p-3"
-            previousClassName="border text-white border-white py-2 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-md px-2"
-            nextClassName="border text-white border-white py-2 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-md px-2"
+            activeClassName="bg-red-600 hover:bg-red-700 transiton-colors duration-300 text-white md:p-3 p-1"
+            previousClassName="border text-white border-white py-2 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-sm px-2"
+            nextClassName="border text-white border-white py-2 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-sm px-2"
             disabledClassName="bg-gray-400 text-white md:text-lg text-md px-2"
-            pageClassName="border md:text-xl text-md text-white border-white py-2 px-2 md:px-4 hover:bg-white hover:text-black transition-all duration-300"
+            pageClassName="border md:text-xl text-md text-white border-white p-1 md:px-4 hover:bg-white hover:text-black transition-all duration-300"
             breakLabel="..."
             nextLabel="Next"
             forcePage={page ? parseInt(page) - 1 : 0}
             onPageChange={handlePageClick}
-            pageRangeDisplayed={5}
+            pageRangeDisplayed={4}
             pageCount={totalPages}
             previousLabel="Previous"
             renderOnZeroPageCount={null}
