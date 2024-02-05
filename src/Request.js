@@ -1,5 +1,5 @@
 const key = "b72fc2cf9b7fad685567a5c20efc7997";
-export const API_URL = "https://netflixclonebe.onrender.com/";
+export const API_URL = "https://netflix-clone-backend-alpha.vercel.app/";
 // export const API_URL = "http://localhost:8888/";
 const request = {
     
