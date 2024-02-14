@@ -85,7 +85,7 @@ function Search() {
   }, [page, title,genreRef.current.value,sortRef.current.value]);
 
   return (
-    <div className="bg-black h-screen w-full sm:resize-none">
+    <div className="bg-black h-full w-full sm:resize-none">
       <div>
         <UserNavbar hideSearch={true}></UserNavbar>
       </div>
@@ -143,9 +143,9 @@ function Search() {
         ) : (
           <div>
             {/* Movies list */}
-            <div className="pr-6 md:p-0 md:ml-6">
+            <div className="pr-6 md:p-0 md:ml-5">
               <h1 className="text-white text-2xl font-bold p-3">Search Result:</h1>
-              <div className="grid lg:grid-cols-6 h-full place-items-center md:grid-cols-4 grid-cols-2">
+              <div className="grid lg:grid-cols-5 h-full place-items-center md:grid-cols-4 grid-cols-2">
                 {movies.length > 0 ? (
                   movies.map((movie) => {
                     return <Movie key={movie._id} movie={movie}></Movie>;
