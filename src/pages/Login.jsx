@@ -35,12 +35,12 @@ function Login() {
           }`}
         />
         <div className="bg-black/60 fixed top-0 left-0 w-full h-full"></div>
-        {/* Overflowing part */}
+        {/* login panel */}
         <div className=" w-full px-4 py-24 z-100 absolute">
           <div className="max-w-[450px]  mx-auto bg-black/75 text-white ">
             <div className="max-w-[320px] mx-auto py-16">
-              <h1 className="text-3xl font-bold">Login</h1>
-              <form action="" className="w-full flex flex-col py-4">
+              <h1 className="text-3xl font-bold ml-8">Login</h1>
+              <form action="" className="w-full flex flex-col py-4 px-8">
                 <input
                   className="p-3 my-2 bg-gray-700 rounded"
                   type="email"
