@@ -137,7 +137,7 @@ function Search() {
         {/* Genre and Sorting */}
         <SortAndGenre genreRef={genreRef} sortRef={sortRef}></SortAndGenre>
         {isLoading ? (
-          <div className="flex justify-center items-center h-[360px]">
+          <div className="flex justify-center items-center h-[360px] pt-10">
             <Loading></Loading>
           </div>
         ) : (
@@ -165,10 +165,10 @@ function Search() {
         <div className="flex md:gap-3 text-white w-full justify-center items-center ">
           <ReactPaginate
             activeClassName="bg-red-600 hover:bg-red-700 transiton-colors duration-300 text-white md:p-3 p-1"
-            previousClassName="border text-white border-white py-2 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-sm px-2"
-            nextClassName="border text-white border-white py-2 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-sm px-2"
-            disabledClassName="bg-gray-400 text-white md:text-lg text-md px-2"
-            pageClassName="border md:text-xl text-md text-white border-white p-1 md:px-4 hover:bg-white hover:text-black transition-all duration-300"
+            previousClassName="border text-white border-white py-1 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-xs px-2"
+            nextClassName="border text-white border-white py-1 md:px-5 hover:bg-white hover:text-black transition-all duration-300 md:text-xl text-xs px-2"
+            disabledClassName="bg-gray-400 text-white md:text-lg text-sm px-2 "
+            pageClassName="border md:text-xl text-xs text-white border-white p-1 md:px-4 hover:bg-white hover:text-black transition-all duration-300 px-2"
             breakLabel="..."
             nextLabel="Next"
             forcePage={page ? parseInt(page) - 1 : 0}
@@ -177,7 +177,7 @@ function Search() {
             pageCount={totalPages}
             previousLabel="Previous"
             renderOnZeroPageCount={null}
-            className="flex gap-3 text-white w-full justify-center items-center p-2 cur"
+            className="flex gap-2 text-white w-full justify-center items-center py-2"
           />
         </div>
 
